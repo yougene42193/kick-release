@@ -1,0 +1,39 @@
+.shoe-list {
+    padding-top: 75px;
+}
+
+.head-title {
+    text-align: center;
+    padding: 30px;
+}
+
+.posts-list {
+    text-align: center;
+    
+}
+
+.single-post {
+    border: 2px solid black;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(175, 175, 175)
+}
+
+.new-post-btn {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+}
+
+@media only screen and (min-width: 760px) {
+    .single-post {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .new-post-btn {
+        margin-right: 20%;
+    }
+}

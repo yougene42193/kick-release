@@ -1,0 +1,22 @@
+.landing-page {
+    text-align: center;
+    padding-top: 35px;
+}
+
+.release-text {
+    padding: 20px;
+}
+
+.what-todo {
+    background-color: rgb(170, 170, 170);
+    padding: 20px;
+}
+
+.get-started {
+    background-color: rgb(133, 133, 133);
+    padding: 20px;
+}
+
+.start-button {
+    padding: 10px;
+}
