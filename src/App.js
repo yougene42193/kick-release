@@ -6,8 +6,10 @@ import RegisterRoute from './Routes/RegisterRoute'
 import LoginRoute from './Routes/LoginRoute';
 import ShoeList from './ShoeList/ShoeList'
 import CreatePost from './CreatePost/CreatePost'
+import PostPage from './Routes/PostPage'
 
 class App extends Component {
+  state = { hasError: false }
   render() {
   return (
     <section className="App">
@@ -33,6 +35,10 @@ class App extends Component {
           <Route 
             path='/create'
             component={CreatePost}
+          />
+          <Route 
+            path='/post/:postId'
+            component={PostPage}
           />
         </Switch>
       </main>

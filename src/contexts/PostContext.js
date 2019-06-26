@@ -44,7 +44,7 @@ export class PostProvider extends Component {
 
   clearPost = () => {
     this.setPost(nullPost)
-    this.setComment([])
+    this.setComments([])
   }
 
   addComment = comment => {

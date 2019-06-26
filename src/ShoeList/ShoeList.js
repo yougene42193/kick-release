@@ -29,7 +29,7 @@ export default class ShoeList extends React.Component {
     render() {
         const { error } = this.context
         return (
-            <Section list className='ThingListPage'>
+            <Section list className='PostListPage'>
                 <Categories />
                 {error
                     ? <p className='red'>There was an error, try again</p>
