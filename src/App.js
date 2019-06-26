@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import LandingPage from './LandingPage/LandingPage'
 import Header from './Header/Header'
-import RegisterForm from './RegisterForm/RegisterForm'
-import LoginForm from './LoginForm/LoginForm';
+import RegisterRoute from './Routes/RegisterRoute'
+import LoginRoute from './Routes/LoginRoute';
 import ShoeList from './ShoeList/ShoeList'
 import CreatePost from './CreatePost/CreatePost'
 
-function App() {
+class App extends Component {
+  render() {
   return (
     <section className="App">
       <Header />
@@ -19,11 +20,11 @@ function App() {
           />
           <Route
             path='/register'
-            component={RegisterForm}
+            component={RegisterRoute}
           />
           <Route 
             path='/login'
-            component={LoginForm}
+            component={LoginRoute}
           />
           <Route 
             path='/list'
@@ -37,6 +38,7 @@ function App() {
       </main>
     </section>
   );
+}
 }
 
 export default App;

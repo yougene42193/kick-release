@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Section } from '../utils/utils'
 import RegisterForm from '../RegisterForm/RegisterForm'
 
 export default class RegisterRoute extends Component {
@@ -15,12 +16,12 @@ export default class RegisterRoute extends Component {
 
   render() {
     return (
-      <section className='RegistrationPage'>
+      <Section className='RegistrationPage'>
         <h2>Register</h2>
         <RegisterForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />
-      </section>
+      </Section>
     )
   }
 }

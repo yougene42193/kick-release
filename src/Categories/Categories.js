@@ -4,7 +4,7 @@ import "./Categories.css";
 
 export default class Categories extends React.Component {
   render() {
-    let categories = ["All", "Adidas", "Jordan", "Nike", "Vans", "Yeezys"];
+    let categories = ["All", "Adidas", "Jordan", "Nike", "Vans", "Yeezy"];
 
     return (
       <section className="categories">

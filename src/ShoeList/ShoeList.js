@@ -1,64 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Section } from '../utils/utils'
 import Categories from '../Categories/Categories'
 import './ShoeList.css'
+import ShoeListItem from '../ShoeListItem/ShoeListItem'
+import PostListContext from '../contexts/PostListContext';
+import ApiService from '../services/post-api-service';
 
 export default class ShoeList extends React.Component {
+    static contextType = PostListContext
+
+    componentDidMount() {
+        this.context.clearError()
+        ApiService.getPosts()
+            .then(this.context.setPostList)
+            .catch(this.context.setError)
+    }
+
+    renderPosts() {
+        const { postList = [] } = this.context
+        return postList.map(post =>
+            <ShoeListItem 
+                key={post.id}
+                post={post}
+            />    
+        )
+    }
+
     render() {
+        const { error } = this.context
         return (
-            <section className="shoe-list">
-                <div className="head-title">
-                    <h2>Kick Release</h2>
-                </div>
+            <Section list className='ThingListPage'>
                 <Categories />
-                <div className="new-post-btn">
-                    <button><Link to='/create'>New Post +</Link></button>
-                </div>
-                <div className="posts-list">
-                    <div className="single-post">
-                        <h3>[Brand] Name of Shoe</h3>
-                        <p>Release Date: xx/xx/xxxx</p>
-                        <p>Description of the shoes!</p>
-                        <button>edit</button>
-                        <button>delete</button>
-                    </div>
-                    <div className="single-post">
-                        <h3>[Brand] Name of Shoe</h3>
-                        <p>Release Date: xx/xx/xxxx</p>
-                        <p>Description of the shoes!</p>
-                        <button>edit</button>
-                        <button>delete</button>
-                    </div>
-                    <div className="single-post">
-                        <h3>[Brand] Name of Shoe</h3>
-                        <p>Release Date: xx/xx/xxxx</p>
-                        <p>Description of the shoes!</p>
-                        <button>edit</button>
-                        <button>delete</button>
-                    </div>
-                    <div className="single-post">
-                        <h3>[Brand] Name of Shoe</h3>
-                        <p>Release Date: xx/xx/xxxx</p>
-                        <p>Description of the shoes!</p>
-                        <button>edit</button>
-                        <button>delete</button>
-                    </div>
-                    <div className="single-post">
-                        <h3>[Brand] Name of Shoe</h3>
-                        <p>Release Date: xx/xx/xxxx</p>
-                        <p>Description of the shoes!</p>
-                        <button>edit</button>
-                        <button>delete</button>
-                    </div>
-                    <div className="single-post">
-                        <h3>[Brand] Name of Shoe</h3>
-                        <p>Release Date: xx/xx/xxxx</p>
-                        <p>Description of the shoes!</p>
-                        <button>edit</button>
-                        <button>delete</button>
-                    </div>
-                </div>
-            </section>
+                {error
+                    ? <p className='red'>There was an error, try again</p>
+                    : this.renderPosts()}
+            </Section>
         )
     }
 }
