@@ -26,7 +26,7 @@ export default class RegisterForm extends React.Component {
             })
             .catch(res => {
                 this.setState({ error: res.error })
-            })
+            })  
     }
 
     render() {
@@ -35,10 +35,11 @@ export default class RegisterForm extends React.Component {
             <section className="register-form">
                 <fieldset>
                     <form
+                        className="register-section"
                         onSubmit={this.handleSubmit}
                     >
                         <div role="alert">
-                            {error && <p className='red'>{error}</p>}
+                            {error && <p className="error-msg">{error}</p>}
                         </div>
                         <h2>Get Started</h2>
                         <div className="user-reg">

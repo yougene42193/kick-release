@@ -9,7 +9,6 @@ import CreatePost from './CreatePost/CreatePost'
 import PostPage from './Routes/PostPage'
 
 class App extends Component {
-  state = { hasError: false }
   render() {
   return (
     <section className="App">

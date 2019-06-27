@@ -11,7 +11,7 @@ export default class ShoeListItem extends Component {
                 <div className='PostListItem_details'>
                     <div className='PostListItem_text'>
                         <h2 className='PostListItem_heading'>[{post.brand}] {post.title}</h2>
-                        <p className="PostListItem_desc">{truncate(post.content)}</p>
+                        {/*<p className="PostListItem_desc">{truncate(post.content)}</p>*/}
                     </div>
                 </div>
             </Link>
