@@ -14,6 +14,7 @@ export default class LoginRoute extends Component {
         const { location, history } = this.props
         const destination = (location.state || {}).form || '/list'
         history.push(destination)
+        window.location.reload();
     }
 
     render() {

@@ -5,7 +5,7 @@ import Header from './Header/Header'
 import RegisterRoute from './Routes/RegisterRoute'
 import LoginRoute from './Routes/LoginRoute';
 import ShoeList from './ShoeList/ShoeList'
-import CreatePost from './CreatePost/CreatePost'
+import CreateRoutes from './Routes/CreateRoute'
 import PostPage from './Routes/PostPage'
 
 class App extends Component {
@@ -33,7 +33,7 @@ class App extends Component {
           />
           <Route 
             path='/create'
-            component={CreatePost}
+            component={CreateRoutes}
           />
           <Route 
             path='/post/:postId'

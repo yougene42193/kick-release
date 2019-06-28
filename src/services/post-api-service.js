@@ -38,8 +38,8 @@ const ApiService = {
               : res.json()
           )
       },
-      postComment(postId, text) {
-        return fetch(`${config.API_ENDPOINT}/reviews`, {
+    postComment(postId, text) {
+        return fetch(`${config.API_ENDPOINT}/comments`, {
           method: 'POST',
           headers: {
             'content-type': 'application/json',

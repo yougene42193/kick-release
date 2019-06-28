@@ -20,6 +20,10 @@ export default class CommentForm extends Component {
             .catch(this.context.setError)
     }
 
+    handleReload = e => {
+        window.location.reload()
+    }
+
     render() {
         return (
             <form
@@ -37,7 +41,7 @@ export default class CommentForm extends Component {
                         placeholder='Make a comment'>
                     </Textarea>
                 </div>
-                <Button type='submit'>
+                <Button type='submit' onClick={this.handleReload}>
                     Post Comment
                 </Button>
             </form>

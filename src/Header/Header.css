@@ -1,3 +1,11 @@
+h1 {
+    padding-top: 20px;
+}
+
+.top-header {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
 
 .link-buttons {
     text-align: right;
@@ -14,6 +22,8 @@ li {
 }
 
 nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
     position: fixed;
     top: 0;
     left: 0;

@@ -7,6 +7,11 @@ import PostListContext from '../contexts/PostListContext';
 import ApiService from '../services/post-api-service';
 
 export default class ShoeList extends React.Component {
+    static defaultProps = {
+        match: {
+            params: {}
+        }
+    }
     static contextType = PostListContext
 
     componentDidMount() {
@@ -30,7 +35,7 @@ export default class ShoeList extends React.Component {
         const { error } = this.context
         return (
             <Section list className='PostListPage'>
-                <Categories />
+                <Categories {...this.props} />
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderPosts()}
