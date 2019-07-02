@@ -9,7 +9,10 @@ import CreateRoutes from './Routes/CreateRoute'
 import PostPage from './Routes/PostPage'
 
 class App extends Component {
+
+
   render() {
+    
   return (
     <section className="App">
       <Header />
@@ -28,7 +31,7 @@ class App extends Component {
             component={LoginRoute}
           />
           <Route 
-            path='/list'
+            exact path='/list'
             component={ShoeList}
           />
           <Route 
@@ -37,6 +40,10 @@ class App extends Component {
           />
           <Route 
             path='/post/:postId'
+            component={PostPage}
+          />
+          <Route 
+            exact path='/list/:brand'
             component={PostPage}
           />
         </Switch>

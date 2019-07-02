@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import LoginForm from '../LoginForm/LoginForm';
-import { Section } from '../utils/utils';
 
 export default class LoginRoute extends Component {
     static defaultProps = {

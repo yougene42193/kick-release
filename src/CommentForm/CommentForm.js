@@ -17,7 +17,7 @@ export default class CommentForm extends Component {
             .then(() => {
                 text.value = ''
             })
-            .catch(this.context.setError)
+            .catch()
     }
 
     handleReload = e => {

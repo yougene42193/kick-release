@@ -6,26 +6,28 @@ import './Header.css'
 export default class Header extends React.Component {
     handleLogoutClick = () => {
         TokenService.clearAuthToken()
-        
+        window.location.reload();
     }
 
     renderLogoutLink() {
         return (
             <div className="loggedin-header">
-                <nav role="navigation">
-            
+                <nav role="navigation">            
                     <div className='header-logged-in'>
-                        <li><Link className="nav-header" to='/create'>Create Post</Link></li>
-                        <li><Link
+                        
+                        <li className="main-link"><Link to='/list'>Kick Release</Link></li>
+                        
+                        <li className="changable-link"><Link className="nav-header" to='/create'>Create Post</Link></li>
+                        <li className="changable-link"><Link
                             className="nav-header"
                             onClick={this.handleLogoutClick}
-                            to='/'>
+                            to='/login'>
                                 Logout
                         </Link></li>
                     </div>
                 </nav>
                 <header>
-                    <h1><Link to='/list'>Kick Release</Link></h1>
+                    
                 </header>
             </div>
         )
@@ -36,12 +38,13 @@ export default class Header extends React.Component {
             <div className="loggedout-header">
                 <nav role="navigation">
                     <div className='header-not-logged-in'>
-                        <li><Link
+                    <li className="main-link"><Link to='/'>Kick Release</Link></li>
+                        <li className="changable-link"><Link
                             className="nav-header"
                             to='/register'>
                             Get Started   
                         </Link></li>
-                        <li><Link
+                        <li className="changable-link"><Link
                             className="nav-header"
                             to='/login'>
                                 Log in    
@@ -49,7 +52,7 @@ export default class Header extends React.Component {
                     </div>
                 </nav>
                 <header>
-                    <h1><Link to='/'>Kick Release</Link></h1>
+
                 </header>
             </div>
         )

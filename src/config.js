@@ -1,5 +1,5 @@
 export default {
-    API_ENDPOINT: 'http://localhost:8000/api',
+    API_ENDPOINT: 'https://fathomless-crag-94771.herokuapp.com/api',
     TOKEN_KEY: 'kick-release-auth-token',
   }
   

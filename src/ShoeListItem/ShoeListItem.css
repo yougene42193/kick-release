@@ -1,0 +1,7 @@
+.PostListItem_details {
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(187, 187, 187);
+}

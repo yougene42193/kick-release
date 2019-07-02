@@ -14,6 +14,10 @@ export default class ShoeList extends React.Component {
     }
     static contextType = PostListContext
 
+    handleDeletePost = postId => {
+        this.props.history.push(`/list`)
+    }
+
     componentDidMount() {
         this.context.clearError()
         ApiService.getPosts()
@@ -23,10 +27,12 @@ export default class ShoeList extends React.Component {
 
     renderPosts() {
         const { postList = [] } = this.context
+        
         return postList.map(post =>
             <ShoeListItem 
                 key={post.id}
                 post={post}
+                onDeletePost={this.handleDeletePost}
             />    
         )
     }
@@ -35,7 +41,7 @@ export default class ShoeList extends React.Component {
         const { error } = this.context
         return (
             <Section list className='PostListPage'>
-                <Categories {...this.props} />
+                <h2>Posts</h2>
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderPosts()}

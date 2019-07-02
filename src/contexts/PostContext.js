@@ -65,6 +65,7 @@ export class PostProvider extends Component {
       setComments: this.setComments,
       clearPost: this.clearPost,
       addComment: this.addComment,
+     
     }
     return (
       <PostContext.Provider value={value}>

@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import PostContext from '../contexts/PostContext'
 import ApiService from '../services/post-api-service'
-import { Hyph, Section } from '../utils/utils'
+import { Section } from '../utils/utils'
+import { Link } from 'react-router-dom'
 import CommentForm from '../CommentForm/CommentForm'
 import './PostPage.css'
 
 export default class PostPage extends Component {
     static defaultProps = {
-        match: { params: {} },
+        match: { 
+            params: {} 
+        },
     }
 
     static contextType = PostContext
@@ -27,14 +30,28 @@ export default class PostPage extends Component {
         this.context.clearPost()
     }
 
+    handleClickDelete = e => {
+        e.preventDefault()
+        const { postId } = this.props.match.params
+
+        ApiService.deletePost(postId)
+        .then(() => {
+            
+           
+          })
+          .catch(error => {
+            console.error({ error })
+          })
+    }
+
     renderPost() {
         const { post, comments } = this.context
         return <>
             <div className='PostPage'>
                 <h2>[{post.brand}] {post.title}</h2>
                 <PostContent post={post} />
-                <PostComments comments={comments} />
                 <CommentForm />
+                <PostComments comments={comments} />              
             </div>
         </>
     }
@@ -43,7 +60,7 @@ export default class PostPage extends Component {
         const { error, post } = this.context
         let content
         if (error) {
-            content = (error.error === `Post doesn;t exist`)
+            content = (error.error === `Post doesn't exist`)
             ? <p className='error-msg'>Post not found</p>
             : <p className='error-msg'>There was an error</p>
         } else if (!post.id) {
@@ -53,7 +70,16 @@ export default class PostPage extends Component {
         }
         return (
             <Section className='PostPage'>
-                {content}
+                <button
+                    className="Post_delete"
+                    type='button'
+                    onClick={this.handleClickDelete}
+                >
+                    <Link to={`/list`}>
+                        Delete
+                    </Link>
+                </button>
+                {content}           
             </Section>
         )
     }
@@ -70,8 +96,12 @@ function PostContent({ post }) {
 function PostComments({ comments = [] }) {
     return (
         <ul className='PostPage_comment-list'>
+            <h3>Comments</h3>
             {comments.map(comment =>
                 <li key={comment.id} className="PostPage_comment">
+                    <p className='Postpage_comment-user'>
+                        {comment.user.user_name}
+                    </p>
                     <p className='PostPage_comment-text'>
                         {comment.text}
                     </p>

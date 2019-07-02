@@ -62,7 +62,7 @@ export default class CreatePost extends React.Component {
                         </div>
                         <div className="desc-label">
                             <label>Description: </label>
-                            <input type="text" placeholder="Add any links" name="content"></input>
+                            <input type="text" placeholder="Add any links" name="content" required></input>
                         </div>
                         <button className="post-btn" type='submit'>Create</button>
                     </form>
