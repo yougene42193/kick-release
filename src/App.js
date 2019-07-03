@@ -7,6 +7,7 @@ import LoginRoute from './Routes/LoginRoute';
 import ShoeList from './ShoeList/ShoeList'
 import CreateRoutes from './Routes/CreateRoute'
 import PostPage from './Routes/PostPage'
+import AuthRoute from './utils/AuthRoute';
 
 class App extends Component {
 
@@ -30,19 +31,19 @@ class App extends Component {
             path='/login'
             component={LoginRoute}
           />
-          <Route 
+          <AuthRoute 
             exact path='/list'
             component={ShoeList}
           />
-          <Route 
+          <AuthRoute 
             path='/create'
             component={CreateRoutes}
           />
-          <Route 
+          <AuthRoute 
             path='/post/:postId'
             component={PostPage}
           />
-          <Route 
+          <AuthRoute 
             exact path='/list/:brand'
             component={PostPage}
           />
