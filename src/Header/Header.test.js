@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import LoginForm from './LoginForm'
+import Header from './Header'
 
-describe('Log in Component', () => {
+describe('Header Component', () => {
     it('renders without crashing', () => {
-        shallow(<LoginForm />)
+        shallow(<Header />)
     }) 
 })

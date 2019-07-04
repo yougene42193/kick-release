@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import LoginForm from './LoginForm'
+import ProfilePage from './CreatePost'
 
-describe('Log in Component', () => {
+describe('Profile Component', () => {
     it('renders without crashing', () => {
-        shallow(<LoginForm />)
+        shallow(<ProfilePage />)
     }) 
 })

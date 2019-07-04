@@ -20,6 +20,9 @@ export default class ShoeListItem extends Component {
         ApiService.deletePost(postId)
         
     }
+
+    
+
     render() {
         const { post } = this.props
         return (
