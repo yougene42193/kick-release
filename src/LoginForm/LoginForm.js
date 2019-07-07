@@ -34,6 +34,7 @@ export default class LoginForm extends React.Component {
         const { error } = this.state
         return (
         <section className="login-form">
+            <h2>Log In</h2>
             <fieldset>
                 <form
                     onSubmit={this.handleSubmitJwtAuth}
@@ -41,14 +42,14 @@ export default class LoginForm extends React.Component {
                     <div role="alert">
                         {error && <p className="error-msg">Incorrect username or password</p>}
                     </div>
-                    <h2>Log In</h2>
+                    
                     <div className="user-log">
                         <label>Username: </label>
-                        <input name='user_name' type="text" required></input>
+                        <br /><input name='user_name' type="text" required></input>
                     </div>
                     <div className="pass-log">
                         <label>Password: </label>
-                        <input name='password' type="password" required></input>
+                        <br /><input name='password' type="password" required></input>
                     </div>
                     <button className="login-btn" type="submit">Log in</button>
                 </form>

@@ -33,31 +33,36 @@ export default class PostPage extends Component {
     handleClickDelete = e => {
         e.preventDefault()
         const { postId } = this.props.match.params
-
         ApiService.deletePost(postId)
         .then(() => {
-            
-           
+            window.location.reload();
           })
           .catch(error => {
             console.error({ error })
           })
+          
     }
 
     renderPost() {
-        const { post, comments } = this.context
+        const { post } = this.context
         return <>
             <div className='PostPage'>
+                <button
+                    className='BackBtn'
+                    type='button'
+                >
+                    <Link to={`/list`}>
+                        Back
+                    </Link>
+                </button>
                 <h2>[{post.brand}] {post.title}</h2>
-                <PostContent post={post} />
-                <CommentForm />
-                <PostComments comments={comments} />              
+                <PostContent post={post} />          
             </div>
         </>
     }
 
     render() {
-        const { error, post } = this.context
+        const { error, post, comments } = this.context
         let content
         if (error) {
             content = (error.error === `Post doesn't exist`)
@@ -70,16 +75,20 @@ export default class PostPage extends Component {
         }
         return (
             <Section className='PostPage'>
+                
+                {content} 
                 <button
                     className="Post_delete"
                     type='button'
                     onClick={this.handleClickDelete}
                 >
-                    <Link to={`/list`}>
+                    <Link to={`/list`} refresh='true'>
                         Delete
                     </Link>
                 </button>
-                {content}           
+                  
+                <CommentForm />
+                <PostComments comments={comments} />          
             </Section>
         )
     }
@@ -96,7 +105,7 @@ function PostContent({ post }) {
 function PostComments({ comments = [] }) {
     return (
         <ul className='PostPage_comment-list'>
-            <h3>Comments</h3>
+            <h3 className="comments-header">Comments</h3>
             {comments.map(comment =>
                 <li key={comment.id} className="PostPage_comment">
                     <p className='Postpage_comment-user'>

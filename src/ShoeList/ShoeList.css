@@ -12,6 +12,15 @@
     
 }
 
+.PostListPage {
+    
+}
+
+.top-banner {
+    background: linear-gradient(to right, rgb(240, 208, 167),  rgb(240, 152, 38));
+    padding: 20px;
+}
+
 .single-post {
     border: 2px solid black;
     padding: 20px;

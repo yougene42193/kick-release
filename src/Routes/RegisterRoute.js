@@ -17,7 +17,6 @@ export default class RegisterRoute extends Component {
   render() {
     return (
       <Section className='RegistrationPage'>
-        <h2>Register</h2>
         <RegisterForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />

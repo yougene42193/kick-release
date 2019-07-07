@@ -1,0 +1,13 @@
+.PostBtn {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 65px;
+    padding-left: 65px;
+}
+
+.Textarea {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    background-color: rgb(179, 219, 255);
+}

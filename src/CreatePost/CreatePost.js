@@ -1,6 +1,7 @@
 import React from 'react';
 import './CreatePost.css'
 import ApiService from '../services/post-api-service';
+import { Textarea } from '../utils/utils'
 
 export default class CreatePost extends React.Component {
     static defaultProps = {
@@ -44,7 +45,7 @@ export default class CreatePost extends React.Component {
                     >
                         <div className="brand-label">
                             <label>Brand: </label>
-                            <select name="brand" required>
+                            <br /><select name="brand" className="create-input" required>
                                 <option value=''>-Select Brand-</option>
                                 <option value='Adidas'>Adidas</option>
                                 <option value='Jordan'>Jordan</option>
@@ -54,15 +55,23 @@ export default class CreatePost extends React.Component {
                         </div>
                         <div className="shoe-label">
                             <label>Shoe Name: </label>
-                            <input type="text" name="title" required></input>
+                            <br /><input type="text" name="title" className="create-input" required></input>
                         </div>
                         <div className="release-label">
                             <label>Release Date: </label>
-                            <input type="date" name="release_date" required></input>
+                            <br /><input type="date" name="release_date" className="create-input" required></input>
                         </div>
                         <div className="desc-label">
                             <label>Description: </label>
-                            <input type="text" placeholder="Add any links" name="content" required></input>
+                            <br /><Textarea
+                                    required
+                                    aria-label='Make a description'
+                                    name='content'
+                                    id='text'
+                                    cols='25'
+                                    rows='3'
+                                    placeholder='Make a description'>
+                                </Textarea>
                         </div>
                         <button className="post-btn" type='submit'>Create</button>
                     </form>

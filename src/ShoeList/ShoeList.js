@@ -1,6 +1,5 @@
 import React from 'react';
 import { Section } from '../utils/utils'
-import Categories from '../Categories/Categories'
 import './ShoeList.css'
 import ShoeListItem from '../ShoeListItem/ShoeListItem'
 import PostListContext from '../contexts/PostListContext';
@@ -41,7 +40,7 @@ export default class ShoeList extends React.Component {
         const { error } = this.context
         return (
             <Section list className='PostListPage'>
-                <h2>Posts</h2>
+                <h2 className='top-banner'>Posts</h2>
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderPosts()}

@@ -33,6 +33,7 @@ export default class RegisterForm extends React.Component {
         const { error } = this.state
         return (
             <section className="register-form">
+                <h2 className="GetStarted">Get Started</h2>
                 <fieldset>
                     <form
                         className="register-section"
@@ -41,10 +42,10 @@ export default class RegisterForm extends React.Component {
                         <div role="alert">
                             {error && <p className="error-msg">{error}</p>}
                         </div>
-                        <h2>Get Started</h2>
+                        
                         <div className="user-reg">
                         <label htmlFor='register-username'>Username: </label>
-                            <Input 
+                            <br /><Input 
                                 name='user_name'
                                 type="text" 
                                 required
@@ -53,7 +54,7 @@ export default class RegisterForm extends React.Component {
                         </div>
                         <div className="pass-reg">
                             <label htmlFor='register-password'>Password: </label>
-                                <Input 
+                               <br /><Input 
                                     name='password'
                                     type="password" 
                                     required

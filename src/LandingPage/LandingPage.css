@@ -3,6 +3,11 @@
     padding-top: 35px;
 }
 
+.landing-page p {
+    line-height: 1.5;
+    font-size: 24px;
+}
+
 .release-text {
     padding: 20px;
 }
@@ -19,4 +24,8 @@
 
 .start-button {
     padding: 10px;
+}
+
+h2 {
+    font-family: 'Audiowide', cursive;
 }

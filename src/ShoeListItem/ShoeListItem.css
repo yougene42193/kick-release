@@ -1,7 +1,13 @@
 .PostListItem_details {
-    border: 2px solid black;
+    border: 2px solid rgb(136, 162, 201);
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
-    background-color: rgb(187, 187, 187);
+    
+    background: linear-gradient(to right, white , rgb(136, 162, 201));
+    box-shadow: 0px 5px 10px 2px #000000;
+}
+
+.PostListItem {
+    font-family: 'Keania One', cursive;
 }

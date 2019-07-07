@@ -1,6 +1,55 @@
 .new-post {
     text-align: center;
-    padding-top: 75px;
+    padding-top: 50px;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+label {
+    font-size: 20px;
+    font-family: 'Keania One', cursive;
+}
+
+.create-input {
+    font-size: 16px;
+    background-color: rgb(179, 219, 255);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.desc-label input {
+    padding-bottom: 40px;
+}
+
+.new-post h2 {
+    background: linear-gradient(to right, rgb(240, 208, 167),  rgb(240, 152, 38));
+    font-size: 26px;
+}
+
+input {
+    font-family: 'Shanti', sans-serif
+}
+
+.post-btn {
+    font-size: 16px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(243, 199, 141);
+    border: 2px solid rgb(243, 199, 141);
+    box-shadow: 0px 5px 10px 2px #000000;
+}
+
+@media only screen and (min-width: 760px) {
+    .create-input {
+        font-size: 20px;
+    }
+
+    .new-post h2 {
+        font-size: 30px;
+    }
 }

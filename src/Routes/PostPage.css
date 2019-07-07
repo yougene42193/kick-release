@@ -1,19 +1,63 @@
 .PostPage {
-    padding-top: 35px;
-    
+    padding-top: 25px;
+    box-shadow: 5px 5px 50px 10px #000000;
+}
+
+.PostPage h2 {
+    padding: 25px;
+    background: rgb(243, 199, 141)
+}
+
+.BackBtn {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.Post_delete {
+    border: 2px solid black;
+    margin-bottom: 15px;
+    background: rgb(241, 32, 32);
+    margin-left: 15px;
+    font-size: 14px;
+    color: white;
 }
 
 .PostPage_comment {
-    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .PostPage_comment-list {
     border: 2px solid black;
     border-radius: 5px;
+    background: linear-gradient(to right, white , rgb(136, 162, 201));
+}
+
+.Postpage_comment-user {
+    font-size: 16px;
+}
+
+.comments-header {
+    border-bottom: 2px solid black;
+}
+
+.PostPage_comment-text {
+    font-size: 20px;
 }
 
 .PostPage_content {
     border: 2px solid black;
     padding: 20px;
+    font-size: 18px;
     border-radius: 5px;
+    background: linear-gradient(to right, white , rgb(136, 162, 201));
+}
+
+@media only screen and (min-width: 760px) {
+    .PostPage {
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-radius: 5px;
+        border-top: 2px solid black;
+    }
 }

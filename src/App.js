@@ -8,6 +8,7 @@ import ShoeList from './ShoeList/ShoeList'
 import CreateRoutes from './Routes/CreateRoute'
 import PostPage from './Routes/PostPage'
 import AuthRoute from './utils/AuthRoute';
+import NotFound from './Routes/NotFound';
 
 class App extends Component {
 
@@ -46,6 +47,9 @@ class App extends Component {
           <AuthRoute 
             exact path='/list/:brand'
             component={PostPage}
+          />
+          <Route
+            component={NotFound}
           />
         </Switch>
       </main>

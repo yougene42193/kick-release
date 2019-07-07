@@ -2,5 +2,37 @@
     text-align: center;
     padding-top: 75px;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 20px;   
+}
+
+fieldset {
+    border: 2px solid rgb(136, 162, 201);
+    border-radius: 5px;
+    background: linear-gradient(to right, white , rgb(136, 162, 201));
+    box-shadow: 0px 5px 10px 2px #000000;
+}
+
+.GetStarted {
+    background: linear-gradient(to right, rgb(240, 208, 167),  rgb(240, 152, 38));
+}
+
+.register-submit {
+    font-size: 16px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(243, 199, 141);
+    border: 2px solid rgb(243, 199, 141);
+    box-shadow: 0px 5px 10px 2px #000000;
+}
+
+@media only screen and (min-width: 760px) {
+    .register-form {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }

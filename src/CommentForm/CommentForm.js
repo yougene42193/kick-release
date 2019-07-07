@@ -30,7 +30,7 @@ export default class CommentForm extends Component {
                 className='CommentForm'
                 onSubmit={this.handleSubmit}
             >
-                <div className='text'>
+                <div className='Comment-text'>
                     <Textarea
                         required
                         aria-label='Make a comment'
@@ -41,7 +41,7 @@ export default class CommentForm extends Component {
                         placeholder='Make a comment'>
                     </Textarea>
                 </div>
-                <Button type='submit' onClick={this.handleReload}>
+                <Button type='submit' className="PostBtn" onClick={this.handleReload}>
                     Post Comment
                 </Button>
             </form>
