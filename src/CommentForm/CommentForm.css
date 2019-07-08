@@ -1,8 +1,16 @@
 .PostBtn {
     padding-top: 7px;
     padding-bottom: 7px;
-    padding-right: 65px;
-    padding-left: 65px;
+    padding-right: 57px;
+    padding-left: 57px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(243, 199, 141);
+    border: 2px solid rgb(243, 199, 141);
+    box-shadow: 0px 5px 10px 2px #000000;
+    font-family: 'Keania One', cursive;
 }
 
 .Textarea {
@@ -10,4 +18,16 @@
     border-radius: 5px;
     padding-bottom: 20px;
     background-color: rgb(179, 219, 255);
+    
+}
+
+.PostBtn:hover {
+    background-color:rgb(136, 162, 201);
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+     transition: background-color 2s ease-out;
 }

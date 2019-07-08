@@ -10,4 +10,13 @@
 
 .PostListItem {
     font-family: 'Keania One', cursive;
+    color: rgb(0, 110, 255);
+}
+
+a:hover {
+    color: orange;
+    -webkit-transition: color 2s ease-out;
+    -moz-transition: color 2s ease-out;
+    -o-transition: color 2s ease-out;
+     transition: color 2s ease-out;
 }

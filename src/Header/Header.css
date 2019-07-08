@@ -11,24 +11,32 @@ h1 {
     text-align: right;
 }
 
-li {
-    display: inline;
+.changable-link {
+    margin-top: 5px;
+}
+
+nav li {
+    display: inline-block;
     list-style: none;
     margin-left: 15px;
     font-size: 20px;
     font-family: 'Audiowide', cursive;
     text-decoration: none;
-    color: rgb(243, 199, 141);
+    
 }
 
 
 a:link {
     text-decoration: none;
-    color: rgb(243, 199, 141);
+    color: rgb(243, 199, 141)
 }
 
 a:active {
-    color: rgb(243, 199, 141);
+    color: rgb(243, 199, 141)
+}
+
+nav a:hover {
+    color: black;
 }
 
 nav a:visited {
@@ -46,7 +54,7 @@ nav a:visited {
 
 nav {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     position: fixed;
     top: 0;
     left: 0;

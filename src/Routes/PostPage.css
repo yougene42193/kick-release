@@ -9,9 +9,27 @@
 }
 
 .BackBtn {
-    position: absolute;
+    font-family: 'Keania One', cursive;
     margin-left: 15px;
-    margin-top: 15px;
+    font-size: 16px;
+    background: rgb(136, 162, 201);
+    padding: 10px;
+}
+
+.BackBtn:link {
+    color: white;
+}
+
+.BackBtn a:visited {
+    color: white;
+}
+
+.BackBtn a:active {
+    color: white;
+}
+
+.BackBtn a:hover {
+    color: black;
 }
 
 .Post_delete {
@@ -21,6 +39,23 @@
     margin-left: 15px;
     font-size: 14px;
     color: white;
+    font-family: 'Keania One', cursive;
+}
+
+.Post_delete a:active {
+    color: white;
+}
+
+.Post_delete a:visited {
+    color: white;
+}
+
+.Post_delete a:link {
+    color: white;
+}
+
+.Post_delete a:hover {
+    color: black;
 }
 
 .PostPage_comment {
@@ -28,6 +63,8 @@
 }
 
 .PostPage_comment-list {
+    list-style: none;
+    display: block;
     border: 2px solid black;
     border-radius: 5px;
     background: linear-gradient(to right, white , rgb(136, 162, 201));
@@ -35,14 +72,18 @@
 
 .Postpage_comment-user {
     font-size: 16px;
+    color: black;
 }
 
 .comments-header {
     border-bottom: 2px solid black;
+    background: rgb(243, 199, 141);
+    font-size: 20px;
 }
 
 .PostPage_comment-text {
-    font-size: 20px;
+    font-size: 18px;
+    color: black;
 }
 
 .PostPage_content {

@@ -13,7 +13,7 @@
 }
 
 .PostListPage {
-    
+    padding-top: 35px;
 }
 
 .top-banner {
@@ -37,6 +37,10 @@
 }
 
 @media only screen and (min-width: 760px) {
+    .PostListPage{
+        padding-top: 15px;
+    }
+
     .single-post {
         margin-left: 20%;
         margin-right: 20%;
