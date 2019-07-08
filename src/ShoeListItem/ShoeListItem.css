@@ -13,7 +13,11 @@
     color: rgb(0, 110, 255);
 }
 
-a:hover {
+.PostListItem:link {
+    color: rgb(0, 110, 255);
+}
+
+.PostListItem:hover {
     color: orange;
     -webkit-transition: color 2s ease-out;
     -moz-transition: color 2s ease-out;
