@@ -10,7 +10,7 @@ as well as post new releases. They can also go into each post to comment on the 
 ### Register Page
 ![register-page](screenshots/kr-register.png)
 ### Log in Page
-![login-page]{screenshots/kr-login.png)
+![login-page](screenshots/kr-login.png)
 ### Create Post Page
 ![create-post-page](screenshots/kr-create.png)
 ### Posts Page
