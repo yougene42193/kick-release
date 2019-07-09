@@ -9,10 +9,11 @@ export default class Header extends React.Component {
         window.location.reload();
     }
 
+    //Changable Link to Logged-in header with auth
     renderLogoutLink() {
         return (
             <div className="loggedin-header">
-                <nav role="navigation">            
+                <nav role="navigation" className="top-links">            
                     <div className='header-logged-in'>
                         
                         <li className="main-link"><Link to='/list'>Kick Release</Link></li>
@@ -33,6 +34,7 @@ export default class Header extends React.Component {
         )
     }
 
+    //Changable Link to Logged-out header if no auth
     renderLoginLink() {
         return (
             <div className="loggedout-header">

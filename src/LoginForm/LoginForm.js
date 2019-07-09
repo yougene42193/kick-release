@@ -10,6 +10,7 @@ export default class LoginForm extends React.Component {
 
     state = { error: null }
 
+    //check if user and password exist, then log in
     handleSubmitJwtAuth = e => {
         e.preventDefault()
         this.setState({ error: null })

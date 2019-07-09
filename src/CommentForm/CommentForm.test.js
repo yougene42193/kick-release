@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import CreatePost from './CreatePost'
+import CommentForm from './CommentForm'
 
-describe('Create Post Component', () => {
+describe('CommentForm Component', () => {
     it('renders without crashing', () => {
-        shallow(<CreatePost />)
+        shallow(<CommentForm />)
     }) 
 })

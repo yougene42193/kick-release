@@ -39,6 +39,14 @@
     font-family: 'Keania One', cursive;
 }
 
+.start-button a:link {
+    color: black;
+}
+
+.start-button a:active {
+    color: black;
+}
+
 .start-button a:visited {
     color: black;
 }

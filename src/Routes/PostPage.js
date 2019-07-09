@@ -15,6 +15,7 @@ export default class PostPage extends Component {
 
     static contextType = PostContext
 
+    //Get comments from commentsRouter for posts
     componentDidMount() {
         const { postId } = this.props.match.params
         this.context.clearError()
@@ -30,6 +31,7 @@ export default class PostPage extends Component {
         this.context.clearPost()
     }
 
+    //delete post
     handleClickDelete = e => {
         e.preventDefault()
         const { postId } = this.props.match.params

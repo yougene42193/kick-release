@@ -7,6 +7,7 @@ import './CommentForm.css';
 export default class CommentForm extends Component {
     static contextType = PostContext
 
+    //Post comments to commentsRouter
     handleSubmit = e => {
         e.preventDefault()
         const { post } = this.context

@@ -9,7 +9,8 @@ export default class RegisterForm extends React.Component {
     }
 
     state = { error: null }
-
+    
+    //Post new accounts to usersRoute
     handleSubmit = e => {
         e.preventDefault()
         const { user_name, password } = e.target
