@@ -62,6 +62,10 @@
      transition: background-color 2s ease-out;
 }
 
+.landing-image {
+    
+}
+
 h2 {
     font-family: 'Audiowide', cursive;
     font-size: 26px;
@@ -76,6 +80,7 @@ h2 {
         padding: 50px;
     }
     .landing-image {
+        margin-top: 40px;
         float: left;
         width: 300px;
         margin-left: 50px;

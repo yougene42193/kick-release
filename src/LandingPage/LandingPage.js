@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css'
-import  landingpage1 from '../images/landing-image.png';
+import  yeezy1 from '../images/yeezy-blue-custom.png';
 
 export default class LandingPage extends React.Component {
     render() {
@@ -13,7 +13,7 @@ export default class LandingPage extends React.Component {
                 </div>
                 <div className="what-todo">
                     <h2>What Can I Do?</h2>
-                    <img className='landing-image' src={landingpage1} alt='app-example'/>
+                    <img className='landing-image' src={yeezy1} alt='yeezy-blue-custom'/>
                     <p>You can post the upcoming shoes along with the date of release, the brand and name of the new shoes. With that other people can see the upcoming shoe releases easily and commented on your post!</p>
                 </div>
                 <div className="get-started">
