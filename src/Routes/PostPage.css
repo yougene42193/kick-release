@@ -1,11 +1,11 @@
 .PostPage {
     padding-top: 25px;
-    box-shadow: 5px 5px 50px 10px #000000;
+    box-shadow: 5px 5px 10px 10px #0000004f;
 }
 
 .PostPage h2 {
     padding: 25px;
-    background: rgb(243, 199, 141)
+    background: linear-gradient(to right, rgb(240, 208, 167),  rgb(240, 152, 38));
 }
 
 .BackBtn {
@@ -67,7 +67,7 @@
     display: block;
     border: 2px solid black;
     border-radius: 5px;
-    background: linear-gradient(to right, white , rgb(136, 162, 201));
+    background: rgb(136, 162, 201);
 }
 
 .Postpage_comment-user {
@@ -77,7 +77,7 @@
 
 .comments-header {
     border-bottom: 2px solid black;
-    background: rgb(243, 199, 141);
+    background: linear-gradient(to right, rgb(240, 208, 167),  rgb(240, 152, 38));
     font-size: 20px;
 }
 
@@ -91,7 +91,7 @@
     padding: 20px;
     font-size: 18px;
     border-radius: 5px;
-    background: linear-gradient(to right, white , rgb(136, 162, 201));
+    background:rgb(136, 162, 201);
 }
 
 @media only screen and (min-width: 760px) {

@@ -10,7 +10,7 @@
 
 .release-text {
     padding: 20px;
-    background: linear-gradient(to right , rgb(240, 208, 167), white);
+    
 }
 
 .what-todo {
@@ -19,7 +19,7 @@
 }
 
 .get-started {
-    background: linear-gradient(to right , rgb(240, 208, 167), white);
+   
     padding: 20px;
 }
 

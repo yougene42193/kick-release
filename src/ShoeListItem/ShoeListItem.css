@@ -4,13 +4,13 @@
     padding: 20px;
     border-radius: 10px;
     
-    background: linear-gradient(to right, white , rgb(136, 162, 201));
-    box-shadow: 0px 5px 10px 2px #000000;
+    background:rgb(136, 162, 201);
+    box-shadow: 0px 5px 5px 2px #00000073;
 }
 
 .PostListItem {
     font-family: 'Keania One', cursive;
-    color: rgb(0, 110, 255);
+    color: rgb(245, 219, 164);
 }
 
 .PostListItem:link {
